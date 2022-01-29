@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 766999e48ec048fbb276981f2d261dbc -->
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+
+
+</head>
+<body>
+
+<button onclick="go()">Click me</button>
+
+<script>
+
+    let hamster = {
+        stomach: [],
+
+        eat(food) {
+            this.stomach.push(food);
+        }
+    };
+
+    let speedy = {
+        stomach: [],
+        __proto__: hamster
+    };
+
+    let lazy = {
+        stomach: [],
+        __proto__: hamster
+    };
+
+    // Этот хомяк нашёл еду
+    speedy.eat("apple");
+
+    console.log( speedy.stomach ); // apple
+
+    // У этого хомяка тоже есть еда. Почему? Исправьте
+    console.log( lazy.stomach ); // apple
+
+
+
+
+
+</script>
+
+<script src="js/materialize.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
